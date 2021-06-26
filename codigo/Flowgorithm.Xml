@@ -1,0 +1,44 @@
+* VacinaÃ§Ã£o.fprg: XML 1.0 document, ASCII text
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bruno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-26 05:42:41 "/>
+        <attribute name="created" value="QnJ1bm87REVTS1RPUC1QTU9FNzdJOzIwMjEtMDYtMjQ7IjA5OjM5OjUwICI7Mjc4Nw=="/>
+        <attribute name="edited" value="QnJ1bm87REVTS1RPUC1QTU9FNzdJOzIwMjEtMDYtMjY7IjA1OjQyOjQxICI7MTsyODg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nome" type="String" array="False" size=""/>
+            <declare name="Idade" type="Integer" array="False" size=""/>
+            <declare name="Vacinacao" type="Integer" array="False" size=""/>
+            <output expression="&quot; Ol&#225;, por favor informe o seu nome &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot; Espero que estaja bem &quot; &amp; (nome)" newline="True"/>
+            <output expression="&quot; Por favor Informe sua idade &quot;" newline="True"/>
+            <input variable="Idade"/>
+            <output expression="&quot;certo seu nome &#233; &quot; &amp; (nome) &amp; &quot; e voc&#234; tem &quot; &amp; (idade) &amp; &quot; anos&quot;" newline="True"/>
+            <if expression="idade&gt;=37">
+                <then>
+                    <output expression="&quot; Parab&#233;ns,  voc&#234; j&#225; pode agendar sua vacina&#231;&#227;o. Sua hora chegou. Deseja agendar. Use 1 para sim e 2 para n&#227;o? &quot;" newline="True"/>
+                    <input variable="Vacinacao"/>
+                    <if expression="vacinacao = 1">
+                        <then>
+                            <output expression="&quot; OK, vamos ao cadastro &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Certo, sem problema. Porem informamos que a vacina&#231;&#227;o s&#243; ser&#225; agendada ap&#243;s o cadastro feito, n&#227;o deixe de fazer o seu &quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot; Infelizmente, voc&#234; ter&#225; que aguardar um pouco mais para se vacinar, preencha o cadastro a baixo e aguarde o email &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
+
